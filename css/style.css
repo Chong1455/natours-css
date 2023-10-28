@@ -1,3 +1,10 @@
+/*
+0-600px: Phone
+600-900px: Tablet portrait
+900px-1200px: Tablet landsacpe
+12000-1800: Desktop - normal styles apply
+1800+: Big desktop
+*/
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +12,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 @keyframes moveInLeft {
   0% {
@@ -470,7 +486,8 @@ body {
     right: 2.5rem;
     font-size: 3rem;
     text-decoration: none;
-    display: inline-block; }
+    display: inline-block;
+    transition: all 0.2s; }
   .popup__close:hover {
     color: #55c57a; }
   .popup__content {
